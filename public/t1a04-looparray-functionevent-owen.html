@@ -1,0 +1,39 @@
+<h1> Loops, Arrays, Functions, Events </h1>
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="Loop" onclick="{
+    let myTemp = document.getElementById('myText01').value
+    let mySum = ''
+    document.getElementById('myDiv01').innerHTML = ' '
+    for (let myLoop=0;   myLoop < myTemp;  myLoop++){
+       mySum += 'Loop #: '+myLoop+'<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = mySum
+}">
+
+<div id="myDiv01">...</div>
+<h1> Looping Arrays </h1>
+<i> Double Click<i><br>
+<script>
+function myExampleFunction(){
+    let myTemp = document.getElementById('myText01').value
+    let mySum = ''
+    document.getElementById('myDiv02').innerHTML = ' '
+    myArray = new Array()
+    myArray[0] = 'Eggburt the seventh'
+    myArray[1] = 'Tyrone'
+    myArray[2] = 'Osama'
+    for (let myLoop=0;   myLoop < myTemp;  myLoop++){
+        mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] +'<br>'
+    }
+    document.getElementById('myDiv02').innerHTML = mySum
+}
+</script>
+
+<input type=text id="myText02" value="3"><br>
+
+<input type=button value="loop-array-function-event" ondblclick="{
+    myExampleFunction()
+}">
+
+<div id="myDiv02">...</div>

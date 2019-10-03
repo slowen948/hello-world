@@ -1,0 +1,17 @@
+<h1><strong> Input Output </strong></h1>
+<i> 3 is doubled, Else is oh no </i><br>
+<input type= text id="myText01" value="3"><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 3)
+{
+    document.getElementById('myDiv01').innerHTML = ('6')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = ('oh no')}
+}"
+<br>
+<div id="myDiv01">...</div>
+<br>

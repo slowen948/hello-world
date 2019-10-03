@@ -1,0 +1,21 @@
+<h1> The yes No input </h1>
+<i> Yes = Yes, Else = </i><br>
+<input type= text id="myText01" value="Yes"><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 'Yes')
+{
+    document.getElementById('myDiv01').innerHTML = ('Yes')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = ('Just put yes in text box')
+    }
+}">
+<br>
+
+
+
+
+<div id="myDiv01">...</div>
