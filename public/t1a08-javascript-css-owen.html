@@ -1,0 +1,74 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://pictures.reuters.com/Doc/RTR/Media/TR3/1/e/2/f/RTS2LECX.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+
+<h1>t1ao8-Javascript-CSS-Owen.html</h1>
+
+<input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('green')
+}">
+<b id="myB01" style="color:black"> <span style="border-color: red;  border-style: ridge; width:
+150px;" >
+
+<br><input type=button value="Change" onclick="{
+    document.getElementById('myB01').style.color = ('blue')
+}">
+the box is a diff colour
+</span><b><br><br>
+<select id="myText01" size=1 onChange="{
+    let myTemp = document.getElementById('myText01').value
+    document.getElementById('myDiv01').style.borderStyle = myTemp
+}">
+
+<option value="groove">Groove
+<option value="dotted">Dotted
+<option value="solid">Solid
+<option value="double">Double
+<option value="dashed">Dashed
+<option value="ridge">Ridge
+<option value="inset">Inset
+<option value="outset">Outset
+<option value="hidden">Hidden
+<option value="none">None
+</select>
+
+<span id="myDiv01" style="border-style:groove; border-width:5;
+border-color:red" >
+This is a box</span><br><br><br><br>
+
+
+<html>
+<html>
+<body>
+
+<h1 style="">Date</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Clickme :)</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
