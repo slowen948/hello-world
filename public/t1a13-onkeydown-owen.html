@@ -1,0 +1,200 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://reuter.on.ca/wp-content/uploads/2015/10/white-seamless-background-free-vector-145.jpg)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<script>
+   let myInterval
+function myIsOnScreen(){
+    if (parseInt(document.getElementById('myDiv01').style.left) > 800) {
+        document.getElementById('myDiv01').style.left = '797px'
+    }
+    if (parseInt(document.getElementById('myDiv01').style.top) > 800) {
+        document.getElementById('myDiv01').style.top = '797px'
+    }
+     if (parseInt(document.getElementById('myDiv01').style.left) < 10) {
+        document.getElementById('myDiv01').style.left = '7px'
+    }
+      if (parseInt(document.getElementById('myDiv01').style.top) < 10) {
+        document.getElementById('myDiv01').style.top = '7px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) > 1200) {
+        document.getElementById('myDiv02').style.left = '1197px'
+    }
+    if (parseInt(document.getElementById('myDiv02').style.top) > 400) {
+        document.getElementById('myDiv02').style.top = '397px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) < 290) {
+        document.getElementById('myDiv02').style.left = '287px'
+    }
+      if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
+        document.getElementById('myDiv02').style.top = '7px'
+    }
+}
+</script>
+
+
+<body onkeydown="{
+     let myKey = event.key
+ //  let myKey = String.toLowerCase(event.key)
+   if (myKey == 'd') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.left =
+               parseInt(document.getElementById('myDiv01').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'w') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.top =
+               parseInt(document.getElementById('myDiv01').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 's') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.top =
+               parseInt(document.getElementById('myDiv01').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'a') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.left =
+               parseInt(document.getElementById('myDiv01').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+    if (myKey == 'A') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.left =
+               parseInt(document.getElementById('myDiv01').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'S') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.top =
+               parseInt(document.getElementById('myDiv01').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'W') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.top =
+               parseInt(document.getElementById('myDiv01').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'D') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv01').style.left =
+               parseInt(document.getElementById('myDiv01').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'l') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.left =
+               parseInt(document.getElementById('myDiv02').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'i') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.top =
+               parseInt(document.getElementById('myDiv02').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'k') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.top =
+               parseInt(document.getElementById('myDiv02').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'j') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.left =
+               parseInt(document.getElementById('myDiv02').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+    if (myKey == 'J') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.left =
+               parseInt(document.getElementById('myDiv02').style.left) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'K') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.top =
+               parseInt(document.getElementById('myDiv02').style.top) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'I') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.top =
+               parseInt(document.getElementById('myDiv02').style.top) - 5
+           myIsOnScreen()
+       } ,20)
+   }
+   if (myKey == 'L') {
+       clearInterval(myInterval)
+       myInterval = setInterval(function(){
+           document.getElementById('myDiv02').style.left =
+               parseInt(document.getElementById('myDiv02').style.left) + 5
+           myIsOnScreen()
+       } ,20)
+   }
+}">
+
+<h1 align=center>Automovement Stuff-Sagar</h1>
+<h2 align=center><i> WASD/wasd/IJKL/ijkl </i></h2>
+<div id="myDiv01" style="position:absolute; left:200; top:200; " ><b><img src="https://upload.wikimedia.org/wikipedia/en/1/1e/Baseball_%28crop%29.jpg"></b></div>
+
+</body>
+
+
+
+
+<div id="myDiv02" style="position:absolute; left:600; top:200; " ><b><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theglobeandmail.com%2Fopinion%2Farticle-sorry-montreal-but-vancouver-needs-a-major-league-baseball-team-more%2F&psig=AOvVaw19fF479fZDVPIJ_q6MlbRH&ust=1572384400483000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICknr_yv-UCFQAAAAAdAAAAABAJ"alt="Cycle 1" width="110" height="60"></b></div>
+
+</body>
