@@ -1,9 +1,9 @@
-<div>
+
 <head>
 <style>
           body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
-			  background:white url(https://pictures.reuters.com/Doc/RTR/Media/TR3/6/e/1/8/RTX19VV5.jpg)
+			  background:white url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFE0qlSmQUoCxk1lBqyVl_CWnUSwiCKDYrx_oKKEhJKvVvsAsG)
           }
 		  iframe {
 			  transition: filter 0.7s;
@@ -24,7 +24,7 @@
 </div>
 <h1 align=center> Objects by Owen<br>
 
-Objects, decisions, decimals by Owen</h1>
+Objects/decisions by owen</h1>
 You add Body Temp and determine if the user has a fever,<br>
 Input the items into objects.<br>
 
@@ -33,76 +33,43 @@ Input the items into objects.<br>
 
 <body id="myBody">
 
-Body Temp: <input type=text id="myText01" value="36.1">°C
 
-<br>
-<input type=button value="First Name" id="button01"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = 'Objective '+ myObj.lastname+ '`s first name is '+myObj.firstname
-}"><input type=button value="Last Name" id="button02"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = myObj.firstname +'`s last name is '+myObj.lastname
-}">
-<input type=button value="Age" id="button03"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = myObj.firstname+' is '+myObj.age+' years old'
-}">
-<input type=button value="Birth Date" id="button04"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
-document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born on '+myObj.birthdate
-}">
-<input type=text id="myText01" value="36.1" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
 
-<script>
-function keydownFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
-}
-function keyupFunction() {
-  document.getElementById("demo").style.backgroundColor = "green";
-}
-</script>>
-
-<script>
-function keydownFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
-}
-function keyupFunction() {
-  document.getElementById("demo").style.backgroundColor = "green";
-}
-</script>
-<br>
-
-<textarea rows="8" cols="70" id="myTextA01" >{
-"firstname":"Owen",
-"lastname":"SMith",
-"age":"01",
-"birthdate":"31/12/1464"
-}
-</textarea>
-
-<div id="myDiv01">...</div>
 
 <!--awes.e-->
-<input type=text id="myName01" value="Taran"><i>Name</i><br>
-<input type=text id="myAge01" value="16"><i>Age</i><br>
-<input type=text id="myBodyTemp01" value="36.1"><i>Body Temp</i>°C<br>
-<input type=button value=run onclick="{
-   let myAge = Math.abs(document.getElementById('myAge01').value)
-   let myName01 = document.getElementById('myName01').value
-   let myTemp = myName01 + ' is a teen.'
-   if (myAge <= 12){ myTemp = myName01 + ' is a child.'}(myBodyTemp <= 4){ myTemp2 = myName01 + ' is freezing.'}
-   if (myAge >=20 && myAge < 65 ){ myTemp = myName01 + ' is an adult.'}(myBodyTemp >= 12){ myTemp2 = myName01 + ' is cold.'}
-   if (myAge >=65 && myAge < 80 ){ myTemp = myName01 + ' must retire.'}(myBodyTemp >=20 && myBodyTemp < 30 ){ myTemp2 = myName01 + ' is chilly.'}
-   if (myAge >= 80){ myTemp = myName01 + ' is going to die soon.'}(myBodyTemp >=30 && myBodyTemp < 45 ){ myTemp2 = myName01 + ' has a normal temperature.'}
-   if (myAge > 99){ myTemp = myName01 + ' is dead.'}(myBodyTemp >=45 && myBodyTemp < 65 ){ myTemp2 = myName01 + ' is sweltering and most likely has a fever.'}
-   if (myAge > 99){ myTemp = myName01 + ' is dead.'}(myBodyTemp >=65 && myBodyTemp < 80 ){ myTemp2 = myName01 + ' is burning. Major fever. '}
-   if (myAge > 99){ myTemp = myName01 + ' is dead.'}(myBodyTemp >= 80){ myTemp2 = myName01 + 'has been internally cooked.'}
-   if (myAge > 99){ myTemp = myName01 + ' is dead.'}(myBodyTemp > 99){ myTemp2 = myName01 + ' is dead '}
-   let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
-   document.getElementById('myDiv03').innerHTML = myTemp
+<br>
+
+
+<br><i>Name</i> <input type=text id="myName01"value="Taran" style="background-color: black; color:green; " >
+<br> <i>Age</i><input type=text id="myAge01"value="23" style="background-color:black ; color:green; " >
+<br><i>Body Temp°f</i> <input type=text id="myBodyTemp01" value="44" style="background-color:black ; color:green; " >
+<br>
+<input type=button value=Run onClick="{
+    let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
+    let myName = document.getElementById('myName01').value
+    let myTemp3 = myName + ' is a teenager '
+    if (myAge <= 4){ myTemp3 = myName + ' is a baby'}
+    if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child'}
+    if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult'}
+    if (myAge >= 65 && myAge < 95 ) { myTemp3 = myName + ' is a senior'}
+    if (myAge >= 95 && myAge < 105 ) { myTemp3 = myName + ' is about to die'}
+    if (myAge >= 105){ myTemp3 = myName + ' is dead'}
+    if (myAge == 69) { myTemp3 = 'nice'}
+    if (myAge == 420) { myTemp3 = 'nice'}
+    let myTemp4 = myName + ' is a teenager '
+    if (myBodyTemp <= 4){ myTemp4 = myName + '`s body temperature is freezing'}
+    if (myBodyTemp >= 0 && myBodyTemp < 30){ myTemp4 = myName + 's` body temperature is very cold'}
+    if (myBodyTemp >= 31 && myBodyTemp < 60){ myTemp4 = myName + 's` body temperature is cold'}
+    if (myBodyTemp >= 61 && myBodyTemp < 80 ){ myTemp4 = myName + '`s body temperature is normal'}
+    if (myBodyTemp >= 81 && myBodyTemp < 88 ){ myTemp4 = myName + '`s body temperature is pretty high'}
+    if (myBodyTemp >= 89 && myBodyTemp < 90 ){ myTemp4 = myName + '`s body normal fever. Go for a check up.'}
+    if (myBodyTemp >= 91 && myBodyTemp < 104 ) { myTemp4 = myName + ' has a high fever. Definitely see a doctor.'}
+    if (myBodyTemp >= 105 && myBodyTemp < 350 ) { myTemp4 = myName + '`s probably on fire. ' + myName + ', you are dying and of need of a doctor.'}
+document.getElementById('myDiv01').innerHTML = myTemp3
+ document.getElementById('myDiv02').innerHTML = myTemp4
 }">
-<div id="myDiv03">...</div>
+<div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
+
+

@@ -3,7 +3,7 @@
 <style>
           body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
-			  background:white url(https://pictures.reuters.com/Doc/RTR/Media/TR3/9/4/7/0/RTX73MPQ.jpg)
+			  background:white url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFE0qlSmQUoCxk1lBqyVl_CWnUSwiCKDYrx_oKKEhJKvVvsAsG)
           }
 		  iframe {
 			  transition: filter 0.7s;
@@ -24,37 +24,26 @@
 </div>
  <h1> Objects/Arrays by Owen </h1>
 
-
- <input type=text id="myText01" value="36.1">
-<br>
-
-<input type=button value="Input/Output" onclick="{
-  let myPerson = {'age':'22', 'name':'Owen'};
-      let myTemp = document.getElementById('myText01').value
-     let myPrintout =  'myPerson object :' +
-       JSON.stringify(myPerson, null, 3) + ' myPerson.age : ' + myPerson.age
-       let myIf = 'cool'
-        if ( parseInt(myPerson.age) >= 20)
-{myIf = 'You are a smarty'}
-        document.getElementById('myDiv01').innerHTML = myIf
-        document.getElementById('myTextArea01').value = myPrintout
-}">
-<div id="myDiv01">...</div><br>
-<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
-<!--2--><br>
-<input type=button value="Show Object Array" onclick="{
-    let  myObjectArray = {'age':'22', 'name':'Owen'};
-    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
-    document.getElementById('myTextArea02').value = myPrintout
-    document.getElementById('myDiv02').innerHTML = 'heck yeah'
-}">
-
-<input type=button value="Show Array Object" onclick="{
-    let myArrayObject = {'Fries':'Milk', 'Ketchup':'Chocolate Syrup','Ketchup and Fries':'Milk with the syrup',};
+<input style="color:algae; background-color: green " type=button value="Show Array Object" onclick="{
+    let myArrayObject = ['Tea', 'Chocalate', 'lamb', 'beef', {Name:'lamb', Type:'sauce', Edible:'I think so'} ];
     let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
     document.getElementById('myTextArea02').value = myPrintout
-    document.getElementbyId('myDiv02').innerHTML = 'Awesomesauce'
+    document.getElementById('myDiv02').innerHTML = 'I like to drink ' + myArrayObject[0] + '.'
+    document.getElementById('myDiv03').innerHTML =  myArrayObject[1] + ' is something I love to eat.'
+    document.getElementById('myDiv04').innerHTML =  myArrayObject[2] + ' is delicious.'
+    document.getElementById('myDiv05').innerHTML =  'I`ll eat ' + myArrayObject[4].Name + ' all day any day.' + myArrayObject[4].Edible + ' they are very good.'
 }">
-
-<div id="myDiv02">...</div><br>
-<textarea id="myTextArea02" rows=10 cols=80 noWRAP>...</textarea>
+<input style="color:black; background-color: green "type=button value="Show Object Array" onclick="{
+    let  myObjectArray = {'age':'16', 'name':'Owen', 'birthdate':'08/10/2003', 'Music Preference':['blues and rock'],'fav sports':['soccer', 'hokcey', 'snow boarding'], 'myFavdrinks':['coffee', 'tea', 'smoothies']};
+    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    document.getElementById('myTextArea02').value = myPrintout
+    document.getElementById('myDiv03').innerHTML = 'Owens age is ' + myObjectArray.age + '.'
+    document.getElementById('myDiv02').innerHTML = 'His name is ' + myObjectArray.name + '.'
+    document.getElementById('myDiv04').innerHTML =  myObjectArray.birthdate + ' Is My birthdate.'
+    document.getElementById('myDiv05').innerHTML = 'Some of his hobbies are ' + myObjectArray.hobbies[0] + ' and ' + myObjectArray.hobbies[1] +'.'
+}"><br>
+<textarea style="color:black; background-color:#4d5dc9 " id="myTextArea02" rows=10 cols=80 noWRAP>...</textarea>
+<div style="color:blue; " id="myDiv02">...</div>
+<div style="color:black; " id="myDiv03">...</div>
+<div style="color:green; " id="myDiv04">...</div>
+<div style="color:brown; " id="myDiv05">...</div>
