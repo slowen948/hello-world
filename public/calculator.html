@@ -1,0 +1,96 @@
+
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFE0qlSmQUoCxk1lBqyVl_CWnUSwiCKDYrx_oKKEhJKvVvsAsG)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+
+
+
+</style>
+</head>
+</div>
+ <h1> Calculator in An object </h1>
+<FORM NAME="Calc">
+<TABLE BORDER=4>
+<TR>
+<TD>
+<INPUT TYPE="text"   NAME="Input" Size="16">
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+<input style="color:algae; background-color:green " type="button" name="one"   value="  1  " OnClick="Calc.Input.value += '1'">
+<input style="color:blue; background-color:red "type="button" name="two"   value="  2  " OnCLick="Calc.Input.value += '2'">
+<input style="color:white; background-color:black "type="button" name="three" value="  3  " OnClick="Calc.Input.value += '3'">
+<input style="color:grey; background-color:pink "type="button" name="times" value="  x  " OnClick="Calc.Input.value += ' * '">
+<br>
+<input style="color:orange; background-color:red "type="button" name="four"  value="  4  " OnClick="Calc.Input.value += '4'">
+<input style="color:blue; background-color:red "type="button" name="five" value="  5  " OnCLick="Calc.Input.value += '5'">
+<input style="color:blue; background-color:red "type="button" name="six"   value="  6  " OnClick="Calc.Input.value += '6'">
+<input style="color:blue; background-color:red "type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' - '">
+<br>
+<input style="color:blue; background-color:red "type="button" name="seven" value="  7  " OnClick="Calc.Input.value += '7'">
+<input style="color:blue; background-color:red "type="button" name="eight" value="  8  " OnCLick="Calc.Input.value += '8'">
+<input style="color:blue; background-color:red "type="button" name="nine"  value="  9  " OnClick="Calc.Input.value += '9'">
+<input style="color:blue; background-color:red "type="button" name="plus"  value="  +  " OnClick="Calc.Input.value += ' + '">
+<br>
+<input style="color:blue; background-color:red "type="button" name="clear" value="  c  " OnClick="Calc.Input.value = ''">
+<input style="color:blue; background-color:red "type="button" name="zero"  value="  0  " OnClick="Calc.Input.value += '0'">
+<input style="color:black; background-color:grey "type="button" name="DoIt"  value="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+<input style="color:black; background-color:magenta "type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' / '">
+<br>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<script>
+ function doFV() {
+
+	// Get user input from the text field that has the id.
+	var principal = parseFloat(document.getElementById('principal').value);
+	var annualRate = parseFloat(document.getElementById('annualRate').value);
+	var years = parseFloat(document.getElementById('years').value);
+	var periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+
+	// Call the function computeFutureValue(principal, annualRate, years, periodsPerYear)
+	// and store the value returned by function in a variable
+	var f = computeFutureValue(principal, annualRate, years, periodsPerYear);
+
+	// Display the result
+	document.getElementById('outputDiv').innerHTML = 'Future Value is $ ' + f;
+}
+
+
+ function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+
+	// Compute and return the future value of an investment.
+	var f = principal * Math.pow(1 + annualRate / periodsPerYear, (years * periodsPerYear));
+
+	return f.toFixed(2);
+
+}
+
+
+	// Reset the form
+function reset() {
+	document.getElementById("resetForm").reset();
+}
+</script>
