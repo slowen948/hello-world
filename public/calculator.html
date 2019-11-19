@@ -21,8 +21,6 @@
 			  background-color: #e1e4ea;
           }
 
-
-
 </style>
 </head>
 </div>
@@ -45,7 +43,7 @@
 <input style="color:orange; background-color:red "type="button" name="four"  value="  4  " OnClick="Calc.Input.value += '4'">
 <input style="color:blue; background-color:red "type="button" name="five" value="  5  " OnCLick="Calc.Input.value += '5'">
 <input style="color:blue; background-color:red "type="button" name="six"   value="  6  " OnClick="Calc.Input.value += '6'">
-<input style="color:blue; background-color:red "type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' - '">
+<input style="color:blue; background-color:red "type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' -'">
 <br>
 <input style="color:blue; background-color:red "type="button" name="seven" value="  7  " OnClick="Calc.Input.value += '7'">
 <input style="color:blue; background-color:red "type="button" name="eight" value="  8  " OnCLick="Calc.Input.value += '8'">
@@ -55,11 +53,30 @@
 <input style="color:blue; background-color:red "type="button" name="clear" value="  c  " OnClick="Calc.Input.value = ''">
 <input style="color:blue; background-color:red "type="button" name="zero"  value="  0  " OnClick="Calc.Input.value += '0'">
 <input style="color:black; background-color:grey "type="button" name="DoIt"  value="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
-<input style="color:black; background-color:magenta "type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' / '">
+<input style="color:black; background-color:magenta "type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' /'">
 <br>
 </TD>
 </TR>
 </TABLE>
 </FORM>
-<div id="myDiv01">...</div>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+  <input type="range" id="a" value="50">100
+  +<input type="number" id="b" value="50">
+  =<output name="x" for="a b"></output>
+</form>
 
+<div id="myDiv01">...</div>
+<div style="color:blue; " id="myDiv02">...</div>
+<div style="color:black; " id="myDiv03">...</div>
+<div style="color:green; " id="myDiv04">...</div>
+<div style="color:brown; " id="myDiv05">...</div>
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 3)
+{
+    document.getElementById('myDiv01').innerHTML = ('6')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = ('oh no')}
+}"
