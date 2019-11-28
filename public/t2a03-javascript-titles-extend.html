@@ -1,1 +1,30 @@
-<h2 align=centre>Javascript Classes t2030classes-new-fred</h2>
+<h2 align=center>Javascript Classes t2a03-classes-new-owen</h2>
+<input type=text id="myNameInput" placeholder="put lulu here" value="">
+
+<input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
+   class myAnimal {
+     constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+   }
+   myShow(){
+	document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName +
+' . You are ' + this.myAge + ' years old<br>'
+   }
+}  // end class myAnimal
+   myPet = new myAnimal('LuLu', 2)
+   myDog.myShow()
+}"><br><br>
+<div id='myDiv130'>...</div><br>
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<input type="button" value="Use ResponsiveCode" onclick="{
+   responsiveVoice.speak('LuLu stop biting')
+}"><br><br>
+
+
+<input type="button" value="initialize speak" onclick="{
+   responsiveVoice.speak('meh', 'US italian Male',
+{pitch: 5, rate: 1, volume : 1})
+}"><br><br>

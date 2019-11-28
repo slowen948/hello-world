@@ -27,7 +27,7 @@
 
 
 <h1 align=center>t2a09-spy-owen</h1>
-<textarea id="myArea01" rows=4 cols=70>Sagar you are very short and so is your dad</textarea><br>
+<textarea id="myArea01" rows=4 cols=70>Put your message here</textarea><br>
 
 
 <input type=button value="encrypt" onclick="{
@@ -65,7 +65,10 @@
        if (myString[myLoop] == '-') {myTemp = '0'}
         if (myString[myLoop] == '+') {myTemp = '2'}
          if (myString[myLoop] == ':') {myTemp = '3'}
-          if (myString[myLoop] == ']') {myTemp = '4'}
+          if (myString[myLoop] == '5') {myTemp = '11'}
+          if (myString[myLoop] == '7') {myTemp = '9'}
+          if (myString[myLoop] == '8') {myTemp = '1'}
+          if (myString[myLoop] == '9') {myTemp = '15'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
@@ -111,6 +114,10 @@
         if (myString[myLoop] == '2') {myTemp = '+'}
          if (myString[myLoop] == '3') {myTemp = ':'}
           if (myString[myLoop] == '4') {myTemp = ']'}
+           if (myString[myLoop] == '11') {myTemp = '5'}
+          if (myString[myLoop] == '9') {myTemp = '7'}
+          if (myString[myLoop] == '1') {myTemp = '8'}
+          if (myString[myLoop] == '15') {myTemp = '9'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea03').value = myString.join('')
