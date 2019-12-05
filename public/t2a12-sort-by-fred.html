@@ -24,43 +24,45 @@
 </div>
 <h1 align=center> t2a12-sort-owen</h1>
 
-<script>
-   let myMax = 53       
-   let myCards = new Array(myMax)
+
+<script >
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+let myArray = []
+myArray[0] = []
+let myTemp = 0
+let x = 0
+function myFunction(){
+    for(let myLoop=0;myLoop<=53;myLoop++){
+        myArray[0][myLoop] = getRndInteger(1, 52)
+        myTemp+=myArray[0][myLoop] +', '
+    }
+    return myTemp
+}
+function mySort(){
+    for (let myLoop1=0;myLoop1<=52;myLoop1++){
+        for(let myLoop2=0;myLoop2<=52;myLoop2++){
+            for(let myLoop=0;myLoop<=52;myLoop++){
+                if(myArray[0][myLoop] >= myArray[0][myLoop+1]){
+                    x= myArray[0][myLoop+1] 
+                    myArray[0][myLoop+1]= myArray[0][myLoop] 
+                    myArray[0][myLoop] = x  
+                }   
+            }
+        }
+        myTemp+=myArray[0][myLoop1] +', '
+    }
+    return myTemp
+}
 </script>
-
-<input type=button value="Set Random" onclick="{
-  for ( let myLoop = 1;   myLoop < myMax;  myLoop++){
-     myCards[myLoop] = Math.floor(Math.random()*53)
-    }
-        let myTemp = ''
-    for ( let myLoop = 1;    myLoop < myMax;  myLoop++){
-        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
-    }
-    document.getElementById('myDiv01').innerHTML = myTemp
+<h1 style="color:black; ">Press for sorting program</h1>
+<input type="button" value="Set Random" onclick="{
+myTemp = ' '
+document.getElementById('myDiv01').innerText = myFunction()
 }">
-
-
-
-<input type=button value="Show" onclick="{
-    let myTemp = ''
-    for ( let myLoop = 0;    myLoop < myMax;  myLoop++){
-        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
-    }
-    document.getElementById('myDiv01').innerHTML = myTemp
+<input type="button" value="Sort" onclick="{
+myTemp=''
+document.getElementById('myDiv01').innerText = mySort()
 }">
-
-<input type=button value="Sort" onclick="{
-    let myTemp = 0
-
-    }for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-     myCards[myLoop] = Math.floor(Math.sort()*52)
-    }
-        let myTemp = ''
-    for ( let myLoop = 0;    myLoop < myMax;  myLoop++){
-        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
-    }
-    document.getElementById('myDiv01').innerHTML = myTemp
-}">
-
-<div id="myDiv01"></div>
+<div id="myDiv01">...</div>
