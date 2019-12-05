@@ -1,0 +1,66 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFE0qlSmQUoCxk1lBqyVl_CWnUSwiCKDYrx_oKKEhJKvVvsAsG)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center> t2a12-sort-owen</h1>
+
+<script>
+   let myMax = 53       
+   let myCards = new Array(myMax)
+</script>
+
+<input type=button value="Set Random" onclick="{
+  for ( let myLoop = 1;   myLoop < myMax;  myLoop++){
+     myCards[myLoop] = Math.floor(Math.random()*53)
+    }
+        let myTemp = ''
+    for ( let myLoop = 1;    myLoop < myMax;  myLoop++){
+        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+
+
+<input type=button value="Show" onclick="{
+    let myTemp = ''
+    for ( let myLoop = 0;    myLoop < myMax;  myLoop++){
+        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+<input type=button value="Sort" onclick="{
+    let myTemp = 0
+
+    }for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myCards[myLoop] = Math.floor(Math.sort()*52)
+    }
+        let myTemp = ''
+    for ( let myLoop = 0;    myLoop < myMax;  myLoop++){
+        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+<div id="myDiv01"></div>
