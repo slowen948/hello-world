@@ -68,20 +68,17 @@ myContext.stroke();
 
 
 
-<input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
-let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+<input type=button value=".createLinearGradient(100, 400, 900, 400)" onclick="{
+let myGradient = myContext.createLinearGradient(100, 400, 900, 400);
 myGradient.addColorStop(0,  'red');
 myGradient.addColorStop(0.5,  'blue');
 myGradient.addColorStop(1,  'yellow');
 myContext.fillStyle = myGradient;
-myContext.fillRect(100, 300, 200, 400);
+myContext.fillRect(100, 400, 900, 400);
 // reset fillstyle
 myContext.fillStyle = 'black';
 }"><br><br>
 
-<input type=button value="clearRect(20, 20, 50, 50)" onclick="{
-   myContext.clearRect(20, 20, 50, 50);
-}">
 
 <input type=button value="clear all" onclick="{
 myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
