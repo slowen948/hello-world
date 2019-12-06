@@ -35,13 +35,13 @@ let myTemp = 0
 let x = 0
 function myFunction(){
     for(let myLoop=0;myLoop<=4;myLoop++){
-        myArray[0][myLoop] = getRndInteger(1, 4)
+        myArray[0][myLoop] = getRndInteger(1, 10)
         myTemp+=myArray[0][myLoop] +', '
     }
     return myTemp
 }
 function mySort(){
-    for (let myLoop1=0;myLoop1<=4;myLoop1++){
+    for (let myLoop1=0;myLoop1<=10;myLoop1++){
         for(let myLoop2=0;myLoop2<=4;myLoop2++){
             for(let myLoop=0;myLoop<=4;myLoop++){
                 if(myArray[0][myLoop] >= myArray[0][myLoop+1]){
