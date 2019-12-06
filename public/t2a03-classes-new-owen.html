@@ -22,40 +22,21 @@
 </style>
 </head>
 </div>
+<h1 align=center>t2 classes by owen</h1>
+<input type=text id="myNameInput" placeholder="Axolotl name" value="">
 
-<h2 align=center>Javascript Classes by Owen</h2>
-<input type=text id="myNameInput" placeholder="..."
-value=""><br><br>
-
-<input id="myButton01" type="button" value="Show This class"
-onclick="{
- class myAxolotl {
-    constructor(passName, passAge) {
-       this.myName = passName;
-       this.myAge = passAge;
-    }
-    myShow(){
-       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + 
-    '. You are ' + this.myAge + ' years old<br>'
-        }
-     }  // end class myAnimal
-       myAxolotl = new myAnimal('Jaba', 2)
-       myAxolotl.myShow()
-    }"><br><br>
-    <div id='myDiv01'>...</div><br>
-
-
-<input id="myButton02" type="button" value="Extend a Class" onclick="{
-class myAnimal {
-    constructor(passName, passAge, passColor, passPaw) {
-        this.myName = passName;
-        this.myAge = passAge; 
-        this.myColor = passColor;
-        this.myPaw = passPaw;
-    }
-    myShow(){
-        document.getElementById('myDiv02').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
-    }
- }   // end class myAnimal { 
-     
-
+<input id="myButton130" type="button" value="click" onclick="{
+   class myAnimal {
+     constructor(passName, passAge) {
+	this.myName = passName;
+	this.myAge = passAge;
+   }
+   myShow(){
+	document.getElementById('myDiv130').innerHTML = ' '+ this.myName +
+'  he is ' + this.myAge + ' years old<br>'
+   }
+}  // end class myAnimal
+   myDog = new myAnimal('jaba', 2)
+   myDog.myShow()
+}"><br><br>
+<div id='myDiv130'>...</div><br>
