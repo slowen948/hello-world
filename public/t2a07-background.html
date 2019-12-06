@@ -1,0 +1,128 @@
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+
+<style>
+body {
+  background-image: url('https://metro.co.uk/wp-content/uploads/2016/09/167447202.jpg?quality=80&strip=all');
+h1{ color: white;
+}
+</style>
+
+<h1 align=center>Make it move</h1>
+
+
+<script>
+  let myGlobalX = 0
+  let myClock 
+</script>
+
+
+
+<input id="myButton01" type=button value="background move left" style="background-color:black; color:green; " onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= 5
+  myTemp = myGlobalX + 'px 0px'
+  document.getElementById('myBody').style.backgroundPosition = myTemp
+}">
+
+
+
+
+<input type=button value="Auto Background Left" style="background-color:black; color:white; " onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click()
+  }, 100)
+}">
+
+
+<input id="myButton02" type=button value="background move right" style="background-color:green; color:black; " onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= -5
+  myTemp = myGlobalX + 'px 0px'
+  document.getElementById('myBody').style.backgroundPosition = myTemp
+}">
+
+
+
+
+<input type=button value="Auto Background right" style="background-color:red; color:black; " onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+     document.getElementById('myButton02').click()
+  }, 100)
+}">
+
+
+
+
+
+<input type=button value="stop" style="background-color:blue; color:purple; " onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+     document.getElementById('myButton03').click()
+  }, 100)
+}">
+
+
+
+
+
+
+<img id="myImg01"<img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/surprises_about_dogs_and_cats_slideshow/1800x1200_surprises_about_dogs_and_cats_slideshow.jpg" style="position:absolute; left:500; top:200; width:100; height:100; " />
+
+<h1> dogs dogs dogs </h1>
+<input type=button value="go Right" style="background-color:black; color:white; "   onclick="{
+   document.getElementById('myImg01').style.left = 
+      parseInt(document.getElementById('myImg01').style.left) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+if ( myHitOther('myImg01','myImg03') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+}">
+
+<input type=button value="go Left" style="background-color:black; color:white; "  onclick="{
+   document.getElementById('myImg01').style.left = 
+      parseInt(document.getElementById('myImg01').style.left) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+if ( myHitOther('myImg01','myImg03') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+}">
+
+<input type=button value="go up" style="background-color:black; color:white; "  onclick="{
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+if ( myHitOther('myImg01','myImg03') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+}">
+
+<input type=button value="go down" style="background-color:black; color:white; "  onclick="{
+   document.getElementById('myImg01').style.top = 
+      parseInt(document.getElementById('myImg01').style.top) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.top = '20px'
+   }
+if ( myHitOther('myImg01','myImg03') ){
+       alert('you win')
+      //document.getElementById('myImg01').style.left = '20px'
+   }
+}"><br>
+
+
+
+
