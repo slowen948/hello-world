@@ -5,6 +5,10 @@ https://slowen948.github.io/hello-world/public/
 
 
 
+to load as a gitpod 
+
+https://gitpod.io/#github.com/slowen948/hello-world
+
 
 
 Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
